@@ -1,0 +1,24 @@
+
+
+
+  <!-- CARDS -->
+<div class="container">
+  <%= link_to 'New Sort', new_sort_path %>
+  <div class="row">
+  <% @sorts.each do |sort| %>
+    <div class="col-sm-4">
+      <div class="card card text-white bg-secondary mb-3">
+        <img src="<%= sort.image %>" class="card-img-top" alt="Image Here">
+        <div class="card-body">
+          <h5 class="card-title"><%= sort.artname %></h5>
+          <%= link_to 'Show', sort, class: 'btn btn-light' %>
+          <%= link_to 'Edit', edit_sort_path(sort), class: 'btn btn-light' %>
+
+          <%= link_to 'Destroy', sort, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-light' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+  <!-- CARDS FIN-->

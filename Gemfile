@@ -66,3 +66,5 @@ gem 'bootstrap', '~> 4.4.1'
 
 #jquery-rails
 gem 'jquery-rails'
+
+gem 'simple_form'
