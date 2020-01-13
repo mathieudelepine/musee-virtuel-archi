@@ -1,26 +1,24 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @art.name %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @art.author %>
-</p>
-
-<p>
-  <strong>Picture:</strong>
-  <%= @art.picture %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @art.description %>
-</p>
-
-<%= link_to 'Edit', edit_art_path(@art) %> |
-<%= link_to 'Back', arts_path %>
-
-<%= link_to 'Back', @art.sort, class: 'btn btn-light' %>
+<section class="py-5">
+<div class="container">
+<div class="card mb-3" >
+  <div class="row no-gutters">
+    <div class="col-md-8">
+      <img src="<%= @art.picture %>" class="card-img" alt="...">
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <h5 class="card-title"><%= @art.name %></h5>
+        <p class="card-text"><%= @art.description %></p>
+        <p class="card-text"><small class="text-muted"><%= @art.author %></small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+	<div class="container">
+		<%= link_to 'Back', @art.sort, class: 'btn btn-dark' %>
+		<%= link_to 'Edit', edit_art_path(@art),class: 'btn btn-dark' %> 
+		<%= link_to 'Destroy', @art, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-dark' %>
+	</div>
+</section>
+	
