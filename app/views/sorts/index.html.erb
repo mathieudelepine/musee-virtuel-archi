@@ -1,9 +1,19 @@
-
+<header class="masthead">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+        <h1 class="font-weight-light">Musée de l'architecture</h1>
+        <p class="lead">créé par Mathieu Delepine</p>
+      </div>
+    </div>
+  </div>
+</header>
 
 
   <!-- CARDS -->
+<section class="py-5">
 <div class="container">
-  <%= link_to 'New Sort', new_sort_path %>
+  <%= link_to 'New Sort', new_sort_path, class: 'btn btn-light' %>
   <div class="row">
   <% @sorts.each do |sort| %>
     <div class="col-sm-4">
@@ -21,4 +31,5 @@
   <% end %>
   </div>
 </div>
+</section>
   <!-- CARDS FIN-->

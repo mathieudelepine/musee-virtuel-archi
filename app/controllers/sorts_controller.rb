@@ -10,6 +10,7 @@ class SortsController < ApplicationController
   # GET /sorts/1
   # GET /sorts/1.json
   def show
+    @sorts = Sort.all
   end
 
   # GET /sorts/new

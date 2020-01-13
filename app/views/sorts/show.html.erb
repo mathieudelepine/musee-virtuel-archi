@@ -1,23 +1,31 @@
+<header class="bg-primary text-center py-5 mb-4">
+  <div class="container">
+    <% @sorts.each do |sort| %>
+    <h1 class="font-weight-light text-white"><%= sort.artname %></h1>
+    <% end %>
+  </div>
+</header>
 
   <!-- CARDS -->
+
+<!-- Page Content -->
 <div class="container">
   <div class="row">
-  <% @sort.arts.each do |art| %>
-    <div class="col-sm-3">
-      <div class="card card text-white bg-secondary mb-3">
+    <% @sort.arts.each do |art| %>
+    <!-- Team Member 1 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
         <img src="<%= art.picture %>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%= art.name %></h5>
-         <%= link_to 'Show', art, class: 'btn btn-light'%>
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0"><%= art.name %></h5>
+          <%= link_to 'Show', art, class: 'btn btn-light'%>
         </div>
       </div>
     </div>
   <% end %>
   </div>
 
-  <!-- CARDS FIN-->
-
-
 <%= link_to 'Back', sorts_path, class: 'btn btn-light'%>
+</div>  
 
-</div>
+  <!-- CARDS FIN-->
