@@ -1,6 +1,6 @@
-<section class="py-5">
+<section class="pt-5">
 <div class="container">
-<div class="card mb-3" >
+<div class="card mb-3 border-0 shadow" >
   <div class="row no-gutters">
     <div class="col-md-8">
       <img src="<%= @art.picture %>" class="card-img" alt="...">
@@ -10,15 +10,15 @@
         <h5 class="card-title"><%= @art.name %></h5>
         <p class="card-text"><%= @art.description %></p>
         <p class="card-text"><small class="text-muted"><%= @art.author %></small></p>
+        <div class="container">
+		</div>
       </div>
     </div>
   </div>
 </div>
 </div>
-	<div class="container">
-		<%= link_to 'Back', @art.sort, class: 'btn btn-dark' %>
-		<%= link_to 'Edit', edit_art_path(@art),class: 'btn btn-dark' %> 
-		<%= link_to 'Destroy', @art, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-dark' %>
-	</div>
 </section>
-	
+
+<section class="py-5 container">
+<%= link_to 'Back', @art.sort, class: 'btn btn-light' %>	
+</section>
